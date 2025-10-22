@@ -4,7 +4,7 @@
   --color-primary-alt: #50f2db;
   --color-secondary: #f53582;
   --color-background: #fffb7d;
-  --color-text: rgb(19.6, 22.4, 30.8);
+  --color-text: #14161f;
   --color-light: #fff;
   --color-anchor: #141c34;
   --font-family: "Orbitron", sans-serif;
@@ -220,12 +220,12 @@ main h3 {
   color: var(--color-primary);
 }
 
-.container h2 {
-  text-align: left;
-}
 .container {
   display: flex;
   flex-direction: column;
+}
+.container h2 {
+  text-align: left;
 }
 
 header {
@@ -354,6 +354,13 @@ nav ul li {
   }
 }
 
+#guidelines {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  border: 2px solid var(--color-primary);
+}
 #guidelines h3 {
   margin-left: 50px;
 }
@@ -366,12 +373,41 @@ nav ul li {
   align-self: self-end;
   margin-right: 100px;
 }
-#guidelines {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  border: 2px solid var(--color-primary);
+#guidelines .link-guidelines {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+#guidelines .link-guidelines::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary));
+  animation: rotate 4s linear infinite;
+}
+#guidelines .link-guidelines::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--color-primary);
+  border-radius: 5px;
+  animation: opacityChange 3s infinite alternate;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 #contribute {
@@ -603,5 +639,3 @@ nav ul li {
   max-width: 200px;
   margin: auto;
 }
-
-/*# sourceMappingURL=style.css.map */
