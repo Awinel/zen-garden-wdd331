@@ -1,6 +1,13 @@
 #guidelines {
   h3 {
+    width: auto;
     margin-left: 50px;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      text-shadow: 5px 5px var(--color-secondary);
+    }
   }
 
   h3 ~ p {
@@ -38,7 +45,9 @@
           var(--color-secondary),
           var(--color-secondary)
         ),
-        linear-gradient(var(--color-secondary), var(--color-secondary));
+        linear-gradient(var(--color-secondary), var(--color-secondary)),
+        linear-gradient(var(--color-primary-alt), var(--color-primary-alt)),
+        linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
       animation: rotate 4s linear infinite;
     }
 
@@ -52,7 +61,6 @@
       height: calc(100% - 12px);
       background: var(--color-primary);
       border-radius: 5px;
-      animation: opacityChange 3s infinite alternate;
     }
   }
 

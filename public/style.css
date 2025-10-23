@@ -362,7 +362,13 @@ nav ul li {
   border: 2px solid var(--color-primary);
 }
 #guidelines h3 {
+  width: auto;
   margin-left: 50px;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+#guidelines h3:hover {
+  text-shadow: 5px 5px var(--color-secondary);
 }
 #guidelines h3 ~ p {
   margin: auto;
@@ -389,7 +395,7 @@ nav ul li {
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary));
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
   animation: rotate 4s linear infinite;
 }
 #guidelines .link-guidelines::after {
@@ -402,7 +408,6 @@ nav ul li {
   height: calc(100% - 12px);
   background: var(--color-primary);
   border-radius: 5px;
-  animation: opacityChange 3s infinite alternate;
 }
 @keyframes rotate {
   100% {
@@ -636,6 +641,31 @@ nav ul li {
 #styles .container .link-allstyles {
   position: relative;
   bottom: -75px;
-  max-width: 200px;
   margin: auto;
+  border-radius: 10px;
+  z-index: 0;
+  overflow: hidden;
+}
+#styles .container .link-allstyles::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
+  animation: rotate 4s linear infinite;
+}
+#styles .container .link-allstyles::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--color-primary);
+  border-radius: 5px;
 }
