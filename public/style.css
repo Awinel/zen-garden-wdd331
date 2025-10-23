@@ -15,6 +15,7 @@
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
   --font-size-text: 1.15rem;
+  --font-size-small-text: 5px;
   --border-radius: 8px;
 }
 
@@ -200,6 +201,13 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--paragraph-font-family);
+  display: flex;
+  flex-flow: column;
+}
+
+nav {
+  order: -1;
+  display: flex;
 }
 
 main {
@@ -245,20 +253,26 @@ header h2 {
   max-width: 30ch;
 }
 
+nav {
+  width: 100%;
+  height: 80px;
+}
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: var(--color-secondary);
+  width: 100%;
+  justify-content: space-evenly;
 }
 nav ul a {
-  display: inline-grid;
-  padding: 0.5rem;
+  padding: 8px;
   color: var(--color-secondary);
   font-size: 1.25rem;
   text-decoration: none;
+  color: var(--color-primary);
 }
 nav ul a::before {
   width: 100%;
@@ -271,9 +285,31 @@ nav ul a:hover::before, nav ul a:focus::before {
   opacity: 1;
 }
 nav ul li {
+  display: flex;
+  align-items: center;
   margin: 0.25rem;
+  background-color: var(--color-primary-alt);
+  margin: 18px 0;
+  border: 2px solid var(--color-primary);
 }
 
+@media (max-width: 425px) {
+  nav {
+    height: auto;
+  }
+  nav ul li {
+    margin: 5px 0;
+    border: 1px solid var(--color-primary);
+  }
+  nav ul li a {
+    font-size: 11.2px;
+    margin: 8px 4px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+}
 #about section:nth-child(2) {
   position: relative;
 }
@@ -326,7 +362,13 @@ nav ul li {
   border: 2px solid var(--color-primary);
 }
 #guidelines h3 {
+  width: auto;
   margin-left: 50px;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+#guidelines h3:hover {
+  text-shadow: 5px 5px var(--color-secondary);
 }
 #guidelines h3 ~ p {
   margin: auto;
@@ -336,6 +378,41 @@ nav ul li {
   max-width: 200px;
   align-self: self-end;
   margin-right: 100px;
+}
+#guidelines .link-guidelines {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+#guidelines .link-guidelines::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
+  animation: rotate 4s linear infinite;
+}
+#guidelines .link-guidelines::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 #contribute {
@@ -564,6 +641,31 @@ nav ul li {
 #styles .container .link-allstyles {
   position: relative;
   bottom: -75px;
-  max-width: 200px;
   margin: auto;
+  border-radius: 10px;
+  z-index: 0;
+  overflow: hidden;
+}
+#styles .container .link-allstyles::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
+  animation: rotate 4s linear infinite;
+}
+#styles .container .link-allstyles::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--color-primary);
+  border-radius: 5px;
 }
