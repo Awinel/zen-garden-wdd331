@@ -67,8 +67,41 @@
     .link-allstyles {
       position: relative;
       bottom: -75px;
-      max-width: 200px;
       margin: auto;
+      border-radius: 10px;
+      z-index: 0;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 400px;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(
+            var(--color-secondary),
+            var(--color-secondary)
+          ),
+          linear-gradient(var(--color-secondary), var(--color-secondary)),
+          linear-gradient(var(--color-primary-alt), var(--color-primary-alt)),
+          linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
+        animation: rotate 4s linear infinite;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: var(--color-primary);
+        border-radius: 5px;
+      }
     }
   }
 }
