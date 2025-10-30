@@ -4,7 +4,7 @@
   --color-primary-alt: #50f2db;
   --color-secondary: #f53582;
   --color-background: #fffb7d;
-  --color-text: #14161f;
+  --color-text: rgb(19.6, 22.4, 30.8);
   --color-light: #fff;
   --color-anchor: #141c34;
   --font-family: "Orbitron", sans-serif;
@@ -668,4 +668,4 @@ nav ul li {
   height: calc(100% - 12px);
   background: var(--color-primary);
   border-radius: 5px;
-}
+}/*# sourceMappingURL=style.css.map */
