@@ -379,41 +379,6 @@ nav ul li {
   align-self: self-end;
   margin-right: 100px;
 }
-#guidelines .link-guidelines {
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 2rem;
-}
-#guidelines .link-guidelines::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 400px;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: 50% 50%, 50% 50%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
-  animation: rotate 4s linear infinite;
-}
-#guidelines .link-guidelines::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 6px;
-  top: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  background: var(--color-primary);
-  border-radius: 5px;
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
 
 #contribute {
   margin-top: 25px;
@@ -660,6 +625,43 @@ nav ul li {
   margin: 25px 10px;
   padding: 25px 20px 50px 20px;
   border: 2px solid var(--color-primary);
+}
+
+#guidelines .link-guidelines {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+#guidelines .link-guidelines::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt)), linear-gradient(var(--color-primary-alt), var(--color-primary-alt));
+  animation: rotate 4s linear infinite;
+}
+#guidelines .link-guidelines::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 #styles .container .features {
   list-style-type: none;
