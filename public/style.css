@@ -517,6 +517,52 @@ nav ul li:nth-child(3) {
     margin-right: 0;
   }
 }
+#about section:nth-child(2) p {
+  padding: 0 40px;
+}
+#about section:nth-child(2) ul {
+  list-style-type: none;
+  padding: 0 40px;
+}
+#about section:nth-child(2) ul li {
+  border: 2px solid #f53582;
+  padding: 10px;
+  text-align: center;
+  word-break: break-word;
+}
+#about section:nth-child(2) a {
+  text-decoration: none;
+  color: #f53582;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #about section:nth-child(2) p:nth-child(2) {
+    max-width: 60%;
+  }
+  #about section:nth-child(2) p:nth-child(3) {
+    margin-left: auto;
+    padding: 0 40px;
+  }
+  #about section:nth-child(2) p:nth-child(5) {
+    margin-top: 20px;
+    max-width: 60%;
+  }
+  #about section:nth-child(2) p:nth-child(6) {
+    max-width: 60%;
+  }
+  #about section:nth-child(2) ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  #about section:nth-child(2) ul li {
+    margin-top: 0;
+    word-break: normal;
+    flex: 1;
+  }
+}
+
 #guidelines {
   margin-top: 25px;
   margin-bottom: 25px;
