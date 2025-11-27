@@ -141,6 +141,7 @@ header {
 
       h1 {
         display: inline-grid;
+        padding-right: 9vw;
         box-shadow: none;
         margin-top: 20px;
         width: 100%;
@@ -151,6 +152,7 @@ header {
 
       h2 {
         font-size: .8rem;
+        padding-right: 9vw;
         text-align: center;
         border: 1px solid var(--color-primary);
         width: 100%;
@@ -165,7 +167,7 @@ header {
         padding: 0 12px;
         position: relative;
         top: -25px;
-        left: 31.8vw;
+        left: 29vw;
         background-color: var(--color-background);
       }
 
@@ -177,6 +179,7 @@ header {
         padding: 0;
         position: relative;
         top: -265px;
+        left: 36vw;
         color: var(--color-primary);
         background-color: var(--color-background);
         border: 2px solid var(--color-primary);
