@@ -10,15 +10,30 @@
           max-width: 800px;
           min-width: 400px;
           margin: 2em 4em 6em auto;
+
+          @media (max-width: 400px) {
+            font-size: 12px;
+            width: 80%;
+            min-width: unset;
+            margin: 2em auto 6em auto;
+          }
         }
 
         > p {
           padding: 0 8em;
+
+          @media (max-width: 400px) {
+            padding: 0 1rem;
+          }
         }
       }
 
       p {
         padding: 0 3rem;
+
+        @media (max-width: 400px) {
+          padding: 0 1rem;
+        }
       }
     }
 
