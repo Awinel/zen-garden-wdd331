@@ -692,17 +692,28 @@ nav ul li:nth-child(3) {
 
 .profile {
   position: relative;
+  text-align: center;
   top: 150px;
-  max-width: 500px;
-  margin: 25px 10px;
+  margin: 25px 20px;
   padding: 25px 20px 50px 20px;
   border: 2px solid var(--color-primary);
-  left: 100px;
+  left: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='85' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='$23141c34' fill-opacity='0.1'%3E%3Ccircle cx='10' cy='10' r='4'/%3E%3Crect x='40' y='5' width='8' height='8' transform='rotate(45 44 9)'/%3E%3Ccircle cx='65' cy='20' r='3'/%3E%3Crect x='15' y='45' width='6' height='12' transform='rotate(30 18 51)'/%3E%3Ccircle cx='50' cy='55' r='5'/%3E%3Crect x='60' y='60' width='10' height='3'/%3E%3C/g%3E%3C/svg%3E");
   background-color: var(--color-primary-alt);
 }
+@media (min-width: 1333px) {
+  .profile {
+    left: 100px;
+    margin: 25px 10px;
+    max-width: 500px;
+    text-align: left;
+  }
+}
 .profile h4 {
   font-weight: bold;
+}
+.profile a {
+  margin-top: 20px;
 }
 .profile .container ul {
   list-style-type: none;
@@ -923,9 +934,12 @@ nav ul li:nth-child(3) {
 #styles {
   position: relative;
   top: -270px;
-  margin: 25px 10px;
+  margin: -50px 10px;
   padding: 25px 20px 50px 20px;
   border: 2px solid var(--color-primary);
+}
+#styles h2 {
+  margin-bottom: 100px;
 }
 
 #guidelines .link-guidelines {
@@ -969,13 +983,22 @@ nav ul li:nth-child(3) {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 600px;
-  margin: -40px auto auto 700px;
+  width: 100%;
+  max-width: 600px;
+  margin: 300px auto 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 1333px) {
+  #styles .container .features {
+    margin: -40px auto auto 700px;
+    width: 600px;
+    padding: 0;
+  }
 }
 #styles .container .features li {
   position: relative;
   top: 5px;
-  margin: 20px;
+  margin: 20px 0;
   padding: 24px 32px;
   background: #f53582;
   color: #141c34;
@@ -989,6 +1012,11 @@ nav ul li:nth-child(3) {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  #styles .container .features li {
+    margin: 20px;
+  }
 }
 #styles .container .features li::before {
   content: "";
@@ -1014,11 +1042,17 @@ nav ul li:nth-child(3) {
 }
 #styles .container .link-allstyles {
   position: relative;
-  bottom: -75px;
-  margin: auto;
+  bottom: auto;
+  margin: 40px auto 20px;
   border-radius: 10px;
   z-index: 0;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  #styles .container .link-allstyles {
+    bottom: -75px;
+    margin: auto;
+  }
 }
 #styles .container .link-allstyles::before {
   content: "";
