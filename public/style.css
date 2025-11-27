@@ -601,6 +601,18 @@ nav ul li:nth-child(3) {
   z-index: 0;
   pointer-events: none;
 }
+@media (max-width: 400px) {
+  #about section:nth-child(2) ul li {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    cursor: pointer;
+    background: #141c34;
+  }
+  #about section:nth-child(2) ul li::before {
+    opacity: 1;
+    animation: wiggle-pattern 3s linear infinite;
+  }
+}
 #about section:nth-child(2) ul li:hover {
   transform: scale(1.05);
   background-color: var(--color-primary);
