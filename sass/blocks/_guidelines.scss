@@ -17,7 +17,10 @@
   .container > a {
     max-width: 200px;
     align-self: self-end;
-    margin-right: 100px;
+    margin: 20px auto;
+    @media (min-width: 768px) {
+      margin-right: 100px;
+    }
   }
   margin-top: 25px;
   margin-bottom: 25px;
